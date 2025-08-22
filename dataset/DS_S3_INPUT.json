@@ -1,20 +1,20 @@
 {
-	"name": "ds_input",
+	"name": "DS_S3_INPUT",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LS_StorageAccount_gen2",
+			"referenceName": "LS_AWS_S3",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
-			"name": "Gen2Gen2"
+			"name": "S3-SA"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "data.csv",
-				"fileSystem": "input"
+				"type": "AmazonS3Location",
+				"bucketName": "bkt-kiran-0312-12aug",
+				"fileName": "data.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
